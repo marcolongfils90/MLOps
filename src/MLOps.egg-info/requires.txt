@@ -1,0 +1,9 @@
+absl-py
+altair
+numpy>=1.8.0rc1
+pandas
+matplotlib
+scipy
+seaborn
+six
+statsmodels

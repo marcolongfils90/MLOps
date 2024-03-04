@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: MLOps
+Version: 1.0.0
+Summary: Simple example of an end-to-end ML pipeline.
+Author: marcolongfils90
+Author-email: marcolongfils@gmail.com
+License: Apache 2.0
+Requires-Python: >=3.6
+
+# End-to-end ML pipeline
+ 
+This is a simple git repo where we build an end to end Machine Learning pipeline.
+It contains the following features:
+1) Github Actions
+2) 

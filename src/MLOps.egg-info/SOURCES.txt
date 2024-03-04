@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/MLOps.egg-info/PKG-INFO
+src/MLOps.egg-info/SOURCES.txt
+src/MLOps.egg-info/dependency_links.txt
+src/MLOps.egg-info/requires.txt
+src/MLOps.egg-info/top_level.txt
+src/ml_project/__init__.py
+src/ml_project/components/__init__.py
+src/ml_project/config/__init__.py
+src/ml_project/config/configuration.py
+src/ml_project/constants/__init__.py
+src/ml_project/entity/__init__.py
+src/ml_project/pipeline/__init__.py
+src/ml_project/utils/__init__.py
