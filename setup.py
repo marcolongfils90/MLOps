@@ -10,11 +10,6 @@ AUTHOR_NAME = "marcolongfils90"
 AUTHOR_EMAIL = "marcolongfils@gmail.com"
 SRC_REPO = "ml_project"
 
-REQUIRED_PACKAGES = [
-    'absl-py', 'altair', 'numpy>=1.8.0rc1', 'pandas', 'matplotlib', 'scipy',
-    'seaborn', 'six', 'statsmodels'
-]
-
 setuptools.setup(
     name=PROJECT_NAME,
     version=__version__,
