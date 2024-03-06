@@ -22,7 +22,7 @@ class DataIngestionPipeline:
 if __name__ == "__main__":
     try:
         logger.info(f"*** Start of stage: {STAGE_NAME}. ***")
-        get_data = DataIngestionPipeline().run()
+        DataIngestionPipeline().run()
         logger.info(f"*** Successfully completed stage: {STAGE_NAME}. ***")
     except Exception as e:
         logger.exception(e)
