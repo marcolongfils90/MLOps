@@ -63,3 +63,15 @@ class ConfigurationManager:
             params_augmentation=self.params.AUGMENTATION,
             params_epoch=self.params.EPOCHS,
         )
+
+    def get_evaluation_config(self) -> common_entities.ModelEvaluationConfig:
+        """Extracts the config to evaluate the model."""
+        validation_data_path = os.path.join(self.config.data_ingestion.unzip_dir,
+                                            "kidney-ct-scan-image")
+
+        return common_entities.ModelEvaluationConfig(
+            model_path=self.config.train_model.trained_model_path,
+            validation_data_path=Path(validation_data_path),
+            params=self.params,
+            mlflow_uri=constants.MLFLOW_URI,
+        )

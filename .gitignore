@@ -3,3 +3,6 @@ artifacts/*
 
 # exclude the logs folder since it's used for logging
 logs/*
+
+# exclude output of evaluation pipeline
+scores.json

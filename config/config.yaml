@@ -14,3 +14,6 @@ create_model:
 train_model:
   root_dir: artifacts/training
   trained_model_path: artifacts/training/trained_model.h5
+
+model_evaluation:
+  model_path: artifacts/training/trained_model.h5

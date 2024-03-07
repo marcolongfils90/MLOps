@@ -32,3 +32,11 @@ class TrainModelConfig:
     params_batch_size: int
     params_augmentation: bool
     params_epoch: int
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    model_path: Path
+    validation_data_path: Path
+    params: dict
+    mlflow_uri: str

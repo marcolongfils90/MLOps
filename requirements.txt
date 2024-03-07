@@ -15,6 +15,6 @@ scipy
 Flask
 Flask-cors
 gdown
-mlflow>=2.2.2
+mlflow>=2.5.0
 setuptools~=65.5.0
 -e .
