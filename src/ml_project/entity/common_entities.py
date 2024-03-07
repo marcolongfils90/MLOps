@@ -20,3 +20,15 @@ class BaseModelConfig:
     params_num_classes: int
     params_weights: str
     params_learning_rate: float
+
+
+@dataclass(frozen=True)
+class TrainModelConfig:
+    root_dir: Path
+    trained_model_path: Path
+    full_model_path: Path
+    training_data_path: Path
+    params_input_size: list
+    params_batch_size: int
+    params_augmentation: bool
+    params_epoch: int

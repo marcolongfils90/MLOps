@@ -10,3 +10,7 @@ create_model:
   root_dir: artifacts/model
   model_path: artifacts/model/model.h5
   untrained_model_path: artifacts/model/untrained_model.h5
+
+train_model:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/trained_model.h5

@@ -1,5 +1,6 @@
 """Module containing the basic functionalities to create a base model."""
 
+import tensorflow as tf
 from tensorflow.keras import layers, Model
 from tensorflow.keras.optimizers import RMSprop
 from ml_project import logger
@@ -40,7 +41,7 @@ class BaseModel:
         full_model = Model(inputs=model.input, outputs=output)
         full_model.compile(
             optimizer=RMSprop(learning_rate=learning_rate),
-            loss="sparse_categorical_crossentropy",
+            loss="categorical_crossentropy",
             metrics=["accuracy"],
         )
 
