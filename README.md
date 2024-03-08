@@ -50,3 +50,10 @@ with their dependencies and parameters.
 
 The pipeline will not run again stages where there haven't been any changes, which
 can save a lot of time.
+
+Lastly, you can use
+```bash
+dvc dag
+```
+to visualize the graph showing the dependencies between the different
+components of the pipeline.
