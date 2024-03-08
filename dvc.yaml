@@ -1,0 +1,50 @@
+stages:
+  data_ingestion:
+    cmd: python src/ml_project/pipeline/data_ingestion_pipeline.py
+    deps:
+      - src/ml_project/pipeline/data_ingestion_pipeline.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/kidney-ct-scan-image
+
+
+  create_model:
+      cmd: python src/ml_project/pipeline/base_model_pipeline.py
+      deps:
+        - src/ml_project/pipeline/base_model_pipeline.py
+        - config/config.yaml
+      params:
+        - INPUT_SIZE
+        - INCLUDE_TOP
+        - NUM_CLASSES
+        - WEIGHTS
+        - LEARNING_RATE
+      outs:
+        - artifacts/model
+
+  train_model:
+    cmd: python src/ml_project/pipeline/train_model_pipeline.py
+    deps:
+      - src/ml_project/pipeline/train_model_pipeline.py
+      - config/config.yaml
+      - artifacts/data_ingestion/kidney-ct-scan-image
+      - artifacts/model
+    params:
+      - INPUT_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+    outs:
+      - artifacts/training/trained_model.h5
+
+
+  evaluate_model:
+    cmd: python src/ml_project/pipeline/model_evaluation_pipeline.py
+    deps:
+      - src/ml_project/pipeline/model_evaluation_pipeline.py
+      - config/config.yaml
+      - artifacts/data_ingestion/kidney-ct-scan-image
+      - artifacts/training/trained_model.h5
+    metrics:
+      - scores.json:
+          cache: false

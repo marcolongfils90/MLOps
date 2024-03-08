@@ -4,5 +4,8 @@ artifacts/*
 # exclude the logs folder since it's used for logging
 logs/*
 
+# exclude the runs folder since it's used for storing the script run
+mlruns/*
+
 # exclude output of evaluation pipeline
 scores.json

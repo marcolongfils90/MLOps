@@ -16,5 +16,6 @@ Flask
 Flask-cors
 gdown
 mlflow>=2.5.0
+dagshub
 setuptools~=65.5.0
 -e .

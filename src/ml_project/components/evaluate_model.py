@@ -31,7 +31,7 @@ class EvaluateModel:
             "rescale": 1/255,
             "validation_split": 0.20,
         }
-        print(self.config.params)
+
         data_flow_kwargs = {
             "target_size": self.config.params.INPUT_SIZE[:-1],
             "batch_size": self.config.params.BATCH_SIZE,
