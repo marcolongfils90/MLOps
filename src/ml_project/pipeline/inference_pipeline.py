@@ -11,7 +11,7 @@ class InferencePipeline:
 
     def predict(self):
         # load model
-        model = load_model("artifacts/training/trained_model.h5")
+        model = load_model("model/trained_model.h5")
 
         test_image = image.load_img(self.filename, target_size=(224, 224))
         test_image = image.img_to_array(test_image)
