@@ -9,3 +9,7 @@ mlruns/*
 
 # exclude output of evaluation pipeline
 scores.json
+
+.idea/
+
+inputImage.jpg
